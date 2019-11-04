@@ -188,6 +188,7 @@ Decoration {
             topMargin: parent.padding.top + parent.borders.top - margins.top
             bottomMargin: parent.padding.bottom + parent.borders.bottom - margins.bottom
         }
+        enabledBorders: parent.borders.left > fixedMargins.left ? PlasmaCore.FrameSvg.TopBorder | PlasmaCore.FrameSvg.BottomBorder | PlasmaCore.FrameSvg.LeftBorder | PlasmaCore.FrameSvg.RightBorder : PlasmaCore.FrameSvg.NoBorder
         imagePath: backgroundSvg.imagePath
         prefix: "innerborder"
         opacity: (decoration.client.active && !decoration.client.maximized && backgroundSvg.supportsInnerBorder) ? 1 : 0
@@ -207,6 +208,7 @@ Decoration {
             topMargin: parent.padding.top + parent.borders.top - margins.top
             bottomMargin: parent.padding.bottom + parent.borders.bottom - margins.bottom
         }
+        enabledBorders: parent.borders.left > fixedMargins.left ? PlasmaCore.FrameSvg.TopBorder | PlasmaCore.FrameSvg.BottomBorder | PlasmaCore.FrameSvg.LeftBorder | PlasmaCore.FrameSvg.RightBorder : PlasmaCore.FrameSvg.NoBorder
         imagePath: backgroundSvg.imagePath
         prefix: "innerborder-inactive"
         opacity: (!decoration.client.active && !decoration.client.maximized && backgroundSvg.supportsInnerBorderInactive) ? 1 : 0
